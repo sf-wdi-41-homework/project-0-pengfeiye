@@ -16,26 +16,38 @@ $(document).on("keypress",function(z){
     $("#player1").css("margin-right",`${player1count}%`)
     //player 1 winning statement below
     if(player1count>=90){
-      confirm("PLAYER ONE WINS")
+      confirm("PLAYER ONE WINS THIS ROUND!")
       player1count=0;
       player2count=0;
       $(".players").css("margin-right","0")
       player1win += 1
+      //if the player 2 wins 3 times they win the game
+      if(player1win===3){
+        alert("Player One Wins FIA Touring Car World Cup!")
+        player1win=0
+      }
       $(".p1score").text(null)
       $(".p1score").text(`${player1win}`)
+
     }
   }else if(z.keyCode===109){
     player2count += 1;
     $("#player2").css("margin-right",`${player2count}%`)
     //player 2 winning statement below
     if(player2count>=90){
-      confirm("PLAYER TWO WINS")
+      confirm("PLAYER TWO WINS THIS ROUND!")
       player1count=0;
       player2count=0;
       $(".players").css("margin-right","0")
       player2win += 1
+      //if the player 2 wins 3 times they win the game
+      if(player2win===3){
+        alert("Player Two Wins FIA Touring Car World Cup!")
+        player2win=0
+      };
       $(".p2score").text(null)
       $(".p2score").text(`${player2win}`)
+
     }}
 })
 
