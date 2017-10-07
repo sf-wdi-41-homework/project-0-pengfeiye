@@ -2,13 +2,30 @@ console.log("WORKING JS!")
 
 $(document).ready(function(){
 
+//win round counter
 var player1win=0;
 var player2win=0;
 //keypress count
 var player1count=0;
 var player2count=0;
-//player's button to move the car when pressing a key
 
+//car selector
+
+var x=7;
+for(var i=1;i<7;i++){
+$("#player1selector").append(`<image class="players col-md-4" id="${i}" src="style/images/car${i}.png">`);
+$("#player2selector").append(`<image class="players col-md-4" id="${x++}" src="style/images/car${i}.png">`)
+}
+
+
+$(".players").on('click', function(event){
+  $(this).css("background","grey")
+  if($(this).attr("id")==="1"){
+    $("#track1").append(this)
+  }
+})
+
+//player's button to move the car when pressing a key
 
 $(document).on("keypress",function(z){
   if(z.keyCode===122){
@@ -28,7 +45,6 @@ $(document).on("keypress",function(z){
       }
       $(".p1score").text(null)
       $(".p1score").text(`${player1win}`)
-
     }
   }else if(z.keyCode===109){
     player2count += 0.5;
@@ -47,10 +63,6 @@ $(document).on("keypress",function(z){
       };
       $(".p2score").text(null)
       $(".p2score").text(`${player2win}`)
-
     }}
 })
-
-
-
 });
