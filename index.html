@@ -3,25 +3,29 @@
 
 <head>
     <meta charset="utf-8">
+    <script src="style/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nosifer|Rye" rel="stylesheet">
+    <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/styles.css">
 
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="js/app.js"></script>
-    <title>Car Game</title>
+    <title>Racing ZERO</title>
 </head>
 
 <body>
-    <h1 class="container title text-center">Car Game</h1>
+
+    <h1 class="container title text-center animated lightSpeedIn">Racing ZERO</h1>
     <div class="scorebox col-md-12">
         <div class="col-md-4">
-            <h2><span class="player1Name">Player 1</span> Rounds Won: <span class="p1score">0</span></h2>
+            <h2 class="animated lightSpeedIn"><span class="player1Name"></span> Rounds Won: <span class="p1score animated lightSpeedIn">0</span></h2>
         </div>
-        <div class="col-md-4 countDown">
+        <div class="col-md-4 countDown text-center">
 
         </div>
         <div class="col-md-4">
-            <h2 class="pull-right"><span class=player2Name>Player 2</span> Rounds Won: <span class="p2score">0</span></h2>
+            <h2 class="pull-right animated lightSpeedIn"><span class=player2Name></span> Rounds Won: <span class="p2score">0</span></h2>
         </div>
     </div>
     <div class="col-md-12" id="gameBoard">
@@ -34,16 +38,21 @@
     </div>
     <div class="container col-md-12 " id="selectorFrame">
         <div class="col-md-5 selector">
-            <h3><span class="player1Name">Player 1</span> Please Select Your Car</h3>
+            <h3><span class="player1Name"></span> Please Select Your Car</h3>
             <div class="pull-left col-md-12" id="player1selector">
             </div>
         </div>
         <div class="col-md-2">
           <button type="button" name="button" class="btn btn-success col-md-12" id="start">Start</button>
           <button type="button" name="button" class="btn btn-danger col-md-12" id="restart">Restart</button>
+          <div class="col-md-12 description">
+            <p><span class="player1Name"></span> Press Z to speed</p>
+            <p><span class="player2Name"></span> Press M to speed</p>
+            <p>Who ever wins three rounds wins the FIA Touring Car World Cup!</p>
+          </div>
         </div>
         <div class="col-md-5 selector">
-            <h3><span class="player2Name">Player 2</span> Please Select Your Car</h3>
+            <h3><span class="player2Name"></span> Please Select Your Car</h3>
             <div class="col-md-12" id="player2selector">
             </div>
         </div>

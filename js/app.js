@@ -2,6 +2,21 @@ console.log("WORKING JS!")
 
 $(document).ready(function() {
 
+    //Customize player name
+    var player1Name = window.prompt("Player One Please Enter Your Name")
+    var player2Name = window.prompt("Player Two Please Enter Your Name")
+
+    if(player1Name === null){
+      player1Name = "Player 1"
+    } if(player2Name === null){
+      player2Name = "Player 2"
+    }
+
+    $(".player1Name").append(`${player1Name}`);
+    $(".player2Name").append(`${player2Name}`);
+
+
+
     //win round counter
 
     var player1win = 0;
@@ -13,24 +28,33 @@ $(document).ready(function() {
     var player2count = 0;
 
     //counter
-    var countStart = 4;
-    var timer =  setInterval(function(){
-        countStart--;
-        if(countStart>0){
-          $(".countDown").append(countStart);
-        }else if(countStart == 0){
-          clearInterval(timer);
-        }
-      }, 1000);
+    var countStart = 6;
+
     $("#start").on('click', function(){
-      timer
+      countStart =6;
+      var timer = setInterval(function(){
+          countStart--;
+          if(countStart>0){
+            $(".countDown").text(null);
+            $(".countDown").append(countStart);
+          }else if(countStart === 0){
+            $(".countDown").text(null);
+            $(".countDown").append(`GO!`).css("color","green");
+            console.log(countStart);
+            clearInterval(timer);
+          }
+        }, 1000);
     })
 
-    //reset
+    //reset and restart
 
     function reset(){
       player1count = 0;
       player2count = 0;
+      countStart = 6;
+      $(".p1score").text("0");
+      $(".p2score").text("0");
+      $(".countDown").text(null);
       $(".players").css("right", "0");
     }
 
@@ -62,8 +86,9 @@ $(document).ready(function() {
 
 
     $(document).on("keypress", function(z) {
-        if (z.keyCode === 122) {
-            player1count += 1;
+      if(countStart===0){
+        if (z.key === 'z') {
+            player1count += 2;
             $("#player1").css("right", `${player1count}%`)
             //player 1 winning statement below
             if (player1count >= 90) {
@@ -79,8 +104,8 @@ $(document).ready(function() {
                 $(".p1score").text(null);
                 $(".p1score").text(`${player1win}`);
             }
-        } else if (z.keyCode === 109) {
-            player2count += 1;
+        } else if (z.key === 'm') {
+            player2count += 2;
             $("#player2").css("right", `${player2count}%`);
             //player 2 winning statement below
             if (player2count >= 90) {
@@ -97,5 +122,6 @@ $(document).ready(function() {
                 $(".p2score").text(`${player2win}`)
             }
         }
+      }
     })
 });
