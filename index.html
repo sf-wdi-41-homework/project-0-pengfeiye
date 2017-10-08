@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/styles.css">
@@ -8,44 +9,49 @@
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="js/app.js"></script>
     <title>Car Game</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1 class="container title text-center">Car Game</h1>
     <div class="scorebox col-md-12">
-      <div class="col-md-4">
-        <h2><span class="player1Name">Player 1</span> Rounds Won: <span class="p1score">0</span></h2>
-      </div>
-      <div class="col-md-4 countDown">
+        <div class="col-md-4">
+            <h2><span class="player1Name">Player 1</span> Rounds Won: <span class="p1score">0</span></h2>
+        </div>
+        <div class="col-md-4 countDown">
 
-      </div>
-      <div class="col-md-4">
-        <h2 class="pull-right"><span class=player2Name>Player 2</span> Rounds Won: <span class="p2score">0</span></h2>
-      </div>
+        </div>
+        <div class="col-md-4">
+            <h2 class="pull-right"><span class=player2Name>Player 2</span> Rounds Won: <span class="p2score">0</span></h2>
+        </div>
     </div>
-    <div class="col-md-12" id="gameBoard" >
-      <div class="col-md-12 track" id="track1">
-      </div>
-      <div class="col-md-12 track" id="track2">
-        <image class="col-md-2 players pull-right img-responsive" src="style/images/car2.png" id="player2">
-      </div>
+    <div class="col-md-12" id="gameBoard">
+        <div class="col-md-12 track" id="track1">
+            <image class="col-md-2 players pull-right img-responsive" src="style/images/car1.png" id="player1">
+        </div>
+        <div class="col-md-12 track" id="track2">
+            <image class="col-md-2 players pull-right img-responsive" src="style/images/car2.png" id="player2">
+        </div>
     </div>
     <div class="container col-md-12 " id="selectorFrame">
-      <div class="col-md-5 selector">
-        <h3><span class="player1Name">Player 1</span> Please Select Your Car</h3>
-        <div class="pull-left col-md-12" id="player1selector">
+        <div class="col-md-5 selector">
+            <h3><span class="player1Name">Player 1</span> Please Select Your Car</h3>
+            <div class="pull-left col-md-12" id="player1selector">
+            </div>
         </div>
-      </div>
-      <div class="col-md-2">
-
-      </div>
-      <div class="col-md-5 selector">
-        <h3><span class="player2Name">Player 2</span> Please Select Your Car</h3>
-        <div class="col-md-12" id="player2selector">
+        <div class="col-md-2">
+          <button type="button" name="button" class="btn btn-success col-md-12" id="start">Start</button>
+          <button type="button" name="button" class="btn btn-danger col-md-12" id="restart">Restart</button>
         </div>
-      </div>
+        <div class="col-md-5 selector">
+            <h3><span class="player2Name">Player 2</span> Please Select Your Car</h3>
+            <div class="col-md-12" id="player2selector">
+            </div>
+        </div>
     </div>
 
 
 
-  </body>
+
+</body>
+
 </html>

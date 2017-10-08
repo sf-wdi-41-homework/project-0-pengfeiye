@@ -33,13 +33,18 @@ margin-right: 0;
 
 #track2{
   margin-top: 0;
+  margin-bottom: -1;
 }
 
 .selector{
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.6);
   border-radius: 20px;
 }
 
 #selectorFrame {
   margin-top:10px;
+}
+
+#restart{
+  margin-top: 5%;
 }
