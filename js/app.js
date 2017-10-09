@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 
 
-    $(document).on("keypress", function(z) {
+    $(document).on("keyup", function(z) {
         if (countStart === 0) {
             if (z.key === 'z') {
                 player1count += 2;
