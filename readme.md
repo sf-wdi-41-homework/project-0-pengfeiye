@@ -10,17 +10,20 @@ Rules:
 ## Technologies Used
 *Used keypress event
 *jquery css changing
-*
+*set interval to create count down time to display
+
 ## Existing Features
 
 *Automatic restarts after winning the round and winning the game
 *Rounds won counter
+*Players are unable to move before the countdown is down to GO!
+*
 
 ## Planned Features
 
 *Adding AI
 *More complicated racing routes
-*
+
 
 ---
 
